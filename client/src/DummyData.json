@@ -1,0 +1,86 @@
+{"data" : [
+  {"user": [
+    {
+      "username": "gmoney",
+      "password": "password",
+      "group_id": 1,
+      "id": 1,
+      "firstname": "Galo",
+      "lastname": "Sandoval",
+      "role": "member",
+      "projects":["Project Bojack","Project AppleJax"]
+    },
+    {
+      "username": "cooksys",
+      "password": "password",
+      "group_id": "undefined",
+      "id": 2,
+      "firstname": "cook",
+      "lastname": "systems",
+      "role": "company",
+      "projects":[
+        "Project Jerry","Project Seinfeld"
+      ]
+      
+    }
+  ]},
+  {"company": [
+    {
+      "id": 1,
+      "name": "cooksys",
+      "description": "recruitment agency and so much more"
+    }
+  ]},
+  {"teams" : [
+    {
+      "id": 1,
+      "company_id": 1,
+      "name": "Team Front End",
+      "description": "Developing UI"
+    },
+    {
+      "id": 2,
+      "company_id": 1,
+      "name": "Team Back End",
+      "description": "Developing Database"
+    },
+    {
+      "id": 3,
+      "company_id": 1,
+      "name": "Team Support",
+      "description": "Developing Good Vibes"
+    },
+    {
+      "id": 4,
+      "company_id": 1,
+      "name": "Team Crossfit",
+      "description": "Changing the world one tire lift at a time"
+    }
+  ]},
+  {"projects": [
+    {
+      "id": 1,
+      "name": "Maintenance",
+      "description": "Mantance",
+      "users":[
+        1, 2
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Project Swoll Patrol",
+      "description": "Get yoked",
+      "users": [
+        1, 2
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Red Eagle",
+      "description": "Top secret",
+      "users": [
+        1
+      ]
+    }
+  ]}
+]}
