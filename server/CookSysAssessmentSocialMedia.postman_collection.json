@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "cb573fe0-d93f-4751-9f54-2928262a322b",
+		"name": "CookSysAssessmentSocialMedia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/users/arwen3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.value).to.eql(100);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Warhammer 40,000 Lore\",\r\n    \"questions\": [\r\n        {\r\n            \"textField\": \"Radical Inquisitors use a <blank>-host?\",\r\n            \"answers\": [\r\n                {\r\n                    \"textField\": \"Daemon\",\r\n                    \"validAnswer\": true\r\n                },\r\n                {\r\n                    \"textField\": \"Psyker\",\r\n                    \"validAnswer\": false\r\n                },\r\n                {\r\n                    \"textField\": \"Soul\",\r\n                    \"validAnswer\": false\r\n                },\r\n                {\r\n                    \"textField\": \"Daedric\",\r\n                    \"validAnswer\": false\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/arwen3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"arwen3"
+					]
+				},
+				"description": "Test Get"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"profile\": {\r\n        \"firstName\": \"Aragorn\",\r\n        \"lastName\": \"Numenor\",\r\n        \"email\": \"strider@protonmail.com\",\r\n        \"phone\": \"987-577-4875\"\r\n    },\r\n    \"credentials\": {\r\n        \"userName\": \"thorongil\",\r\n        \"password\": \"MenOfTheWest\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				},
+				"description": "Test post user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/Thorongil",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"profile\": {\r\n        \"email\": \"Ranger@protonmail.com\",\r\n        \"phone\": \"987-577-4875\"\r\n    },\r\n    \"credentials\": {\r\n        \"userName\": \"Thorongil\",\r\n        \"password\": \"MenOfTheWest\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/Thorongil",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"Thorongil"
+					]
+				},
+				"description": "Test Patch\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/Thorongil",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"credentials\": {\r\n        \"userName\": \"Thorongil\",\r\n        \"password\": \"MenOfTheWest\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/Thorongil",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"Thorongil"
+					]
+				},
+				"description": "delete test\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/@Eowyn/follow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"profile\": {\r\n            \"firstName\": \"Aragorn\",\r\n            \"lastName\": \"Numenor\",\r\n            \"email\": \"strider@protonmail.com\",\r\n            \"phone\": \"987-577-4875\"\r\n        },\r\n        \"credentials\": {\r\n            \"userName\": \"thorongil\",\r\n            \"password\": \"MenOfTheWest\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/@Eowyn/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"@Eowyn",
+						"follow"
+					]
+				},
+				"description": "post follow\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/users/@Arwen/feed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/users/@Arwen/feed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"@Arwen",
+						"feed"
+					]
+				},
+				"description": "get tweet feed\r\n"
+			},
+			"response": []
+		}
+	]
+}
